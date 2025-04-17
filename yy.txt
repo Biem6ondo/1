@@ -740,7 +740,7 @@ end,
 })
 
 Tab:CreateButton({
-Name = "Downed",
+Name = "Downed (Only Not Inject)",
 Callback = function()
 local player = game.Players.LocalPlayer
 local replicatedStorage = game:GetService("ReplicatedStorage")
@@ -752,7 +752,13 @@ local args = {
 }
 
 if getHealth then
-    while getHealth.health.Value > 0 do
+    getHealth.health:GetPropertyChangedSignal("Value"):Connect(function()
+        if getHealth.health.Value > 0 then
+            damageRemote:FireServer(unpack(args))
+        end
+    end)
+
+    if getHealth.health.Value > 0 then
         damageRemote:FireServer(unpack(args))
     end
 end
