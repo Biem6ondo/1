@@ -737,7 +737,7 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("remotes"):WaitForChild("actions"):FireServer(unpack(args))
 end,
-)}
+})
 
 Tab:CreateButton({
 Name = "Downed",
@@ -757,7 +757,7 @@ if getHealth then
     end
 end
 end,
-)}
+})
 
 Tab:CreateButton({
     Name = "Be Minion Right now",
