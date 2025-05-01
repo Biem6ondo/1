@@ -97,10 +97,10 @@ Tab:CreateToggle({
 })
 
 game:GetService("RunService").Heartbeat:Connect(function()
-for i = 1, 10 do
+for i = 1, 5 do
    if teleporEnabled then
 local args = {
-	CFrame.new(1e9, 1e9, 1e9, 0.9804489016532898, -0.025039732456207275, -0.19517436623573303, -2.7939677238464355e-09, 0.9918705224990845, -0.12725123763084412, 0.19677403569221497, 0.12476333975791931, 0.9724783301353455)
+	CFrame.new(1e9, 1e9, 1e9, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 game:GetService("ReplicatedStorage"):WaitForChild("remotes"):WaitForChild("headRotation"):FireServer(unpack(args))
    end
