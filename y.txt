@@ -89,7 +89,7 @@ local Tab = Window:CreateTab("Main", 10814531047)
 local teleporEnabled = false
 
 Tab:CreateToggle({
-   Name = "Headless",
+   Name = "Headless (Working!)",
    CurrentValue = false,
    Callback = function(Value)
       teleporEnabled = Value
@@ -100,7 +100,7 @@ game:GetService("RunService").Heartbeat:Connect(function()
 for i = 1, 5 do
    if teleporEnabled then
 local args = {
-	CFrame.new(1e9, 1e9, 1e9, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	CFrame.new(0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 game:GetService("ReplicatedStorage"):WaitForChild("remotes"):WaitForChild("headRotation"):FireServer(unpack(args))
    end
