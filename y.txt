@@ -33,7 +33,7 @@ end)
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-   Name = "DrayvenX",
+   Name = "Test - 1",
    Icon = 0,
    LoadingTitle = "Wait...",
    LoadingSubtitle = "",
@@ -1858,6 +1858,8 @@ Tab:CreateButton({
 
 local Tab = Window:CreateTab("Beta", 88065516251752)
 
+local ToggleEnabled = false
+
 local Toggle = Tab:CreateToggle({
     Name = "Поворот головы на 180° 🔥🔥🔥",
     CurrentValue = false,
@@ -1866,8 +1868,6 @@ local Toggle = Tab:CreateToggle({
         ToggleEnabled = Value
     end,
 })
-
-local ToggleEnabled = false
 
 local RS = game:GetService("RunService")
 local remote = game:GetService("ReplicatedStorage"):WaitForChild("remotes"):WaitForChild("headRotation")
