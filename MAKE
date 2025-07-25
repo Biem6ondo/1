@@ -63,7 +63,7 @@ local Toggle = Tab:CreateToggle({
 task.spawn(function()
     local index = 1
     while true do
-        task.wait(0.07)
+        task.wait()
         if not BetaEnabled then
             index = 1
             continue
