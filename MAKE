@@ -805,12 +805,14 @@ local function boost()
 end
 
 local function hammer()
+for i = 1, 50 then
     local target = getNextPlayer()
     local r = game.ReplicatedStorage.remotes
 
     if target and target:FindFirstChild("HumanoidRootPart") then
         r.abilities:FireServer("throwHammer", vector.create(target.HumanoidRootPart.Position.X, target.HumanoidRootPart.Position.Y, target.HumanoidRootPart.Position.Z))
     end
+end
 end
 
 local ToggleGrapple = Tab:CreateToggle({
