@@ -182,7 +182,7 @@ local function getNearestPlayer()
 end
 
 local Toggle = Tab:CreateToggle({
-    Name = "Big Hitbox,
+    Name = "Big Hitbox",
     CurrentValue = false,
     Flag = "ToggleAutoHit",
     Callback = function(Value)
